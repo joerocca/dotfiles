@@ -1,0 +1,12 @@
+[Unit]
+Description=i3lock on suspend
+After=sleep.target
+
+[Service]
+User=%i
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock -t -i ${HOME}/Pictures/lockscreen.png
+
+[Install]
+WantedBy=sleep.target
