@@ -33,3 +33,11 @@ vim +PluginInstall +qall
 #COCOAPODS
 
 gem install cocoapods
+
+
+#HOMEBREW
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#apps
+brew cask install sublime-text
