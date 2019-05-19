@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+
 #PULL DOWN DOTFILES
 git clone https://github.com/joerocca/dotfiles.git ~/dotfiles
 
@@ -22,3 +28,8 @@ ln -snf ~/dotfiles/.vimrc ~/.vimrc
 #vundle install
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+
+#COCOAPODS
+
+gem install cocoapods
