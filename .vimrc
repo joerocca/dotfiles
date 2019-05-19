@@ -1,3 +1,4 @@
+" Vundle Config
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -38,15 +39,22 @@ nmap <leader>s  :w<cr>
 imap jk <esc>:w<cr>
 imap kj <esc>:w<cr>
 
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " Settings
+
+syntax on
 
 set number 	" Show line numbers
 set showcmd 	" Show me what I'm typing
 set showmode	" Show current mode
 set ruler	" Show the cursor position all the time
 set autochdir 	" Change to current file's directory
-
+set belloff=all
 " use indentation of previous line
 set autoindent
 " use intelligent indentation
